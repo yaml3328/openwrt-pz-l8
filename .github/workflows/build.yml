@@ -293,7 +293,7 @@ jobs:
       - name: Build variants
         run: |
           chmod +x "$GITHUB_WORKSPACE/build.sh"
-          "$GITHUB_WORKSPACE/build.sh" -v router -c on
+          "$GITHUB_WORKSPACE/build.sh" router
 
       - name: Build summary
         run: |
