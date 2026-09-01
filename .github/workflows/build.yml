@@ -218,7 +218,11 @@ jobs:
           large-packages: true
           docker-images: true
           swap-storage: true
-
+          
+      - name: SSH into GitHub Runner
+        uses: mxschmitt/action-tmate@v3
+        timeout-minutes: 120
+        
       - name: Show system info
         run: |
           echo "=== Disk ===" && df -h /
